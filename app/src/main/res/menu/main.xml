@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dropTable"
+        android:title="table"/>
+
+    <item
+        android:id="@+id/ourService"
+        android:title="tablita">
+
+        <menu>
+            <item android:id="@+id/nuevo"
+                android:title="nuevo"/>
+            <item android:id="@+id/nuevoDos"
+                android:title="nuevoso"/>
+        </menu>
+    </item>
+</menu>

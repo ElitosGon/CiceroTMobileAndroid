@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icon"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="4dp"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre guía"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/img"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/textTitle"/>
+
+    <TextView
+        android:id="@+id/ciudad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img"
+        android:layout_below="@+id/titulo"
+        android:text="Ciudad"
+        android:layout_marginTop="3dp"
+        android:textSize="17sp"/>
+
+
+
+    <ImageView
+        android:id="@+id/Twostar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/star"
+        android:layout_alignBottom="@+id/img"
+        android:layout_toRightOf="@+id/Onestar"
+        android:layout_below="@+id/duracion"
+        android:tint="@color/colorPrimaryDark"/>
+
+    <ImageView
+        android:id="@+id/Threestar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/star"
+        android:layout_alignBottom="@+id/img"
+        android:layout_toRightOf="@+id/Twostar"
+        android:layout_below="@+id/duracion"
+        android:tint="@color/colorPrimaryDark"/>
+
+    <ImageView
+        android:id="@+id/Forstar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/star"
+        android:layout_alignBottom="@+id/img"
+        android:layout_toRightOf="@+id/Threestar"
+        android:layout_below="@+id/duracion"
+        android:tint="@color/colorPrimaryDark"/>
+
+    <ImageView
+        android:id="@+id/Fivestar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/star"
+        android:layout_alignBottom="@+id/img"
+        android:layout_toRightOf="@+id/Forstar"
+        android:layout_below="@+id/duracion"
+        android:tint="@color/colorPrimaryDark"/>
+
+    <ImageView
+        android:id="@+id/Onestar"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/star"
+        android:layout_alignBottom="@+id/img"
+        android:layout_toRightOf="@+id/img"
+        android:layout_below="@+id/duracion"
+        android:tint="@color/colorPrimaryDark"/>
+
+
+
+    <TextView
+        android:id="@+id/tours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/titulo"
+        android:layout_alignParentRight="true"
+        android:text="10 Tours"
+        android:layout_marginRight="5dp"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:textColor="@color/colorPrimary"/>
+
+</RelativeLayout>

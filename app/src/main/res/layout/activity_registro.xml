@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+ <RelativeLayout
+     android:id="@+id/topPanel"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="@color/colorPrimary"
+     >
+
+     <ImageView
+         android:id="@+id/backIcon"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/arrow_left"
+         android:tint="@color/white"
+         android:padding="10dp"/>
+
+     <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:text="Registro"
+         android:textColor="@color/white"
+         android:textSize="18sp"
+         android:layout_margin="10dp"/>
+ </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:src="@drawable/log"
+        android:layout_below="@+id/topPanel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:id="@+id/registroTurista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:text="Registrarse como turista"
+        android:textColor="@color/white"
+        android:background="@drawable/highlight_button"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/o"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O"
+        android:layout_below="@id/registroTurista"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/registroGuia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/o"
+        android:text="Registrarse como guía"
+        android:textColor="@color/white"
+        android:background="@drawable/highlight_button"
+        android:layout_margin="10dp"/>
+
+    <TextView
+        android:id="@+id/Remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:clickable="true"
+        android:padding="10dp"
+        android:background="@drawable/highlight_white"
+        android:text="¿Ya tienes una cuenta? Ingresa!"/>
+</RelativeLayout>
