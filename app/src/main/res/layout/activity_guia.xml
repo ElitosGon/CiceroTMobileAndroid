@@ -106,8 +106,52 @@
         android:tint="@color/white"
         />
 
+    <RelativeLayout
+        android:id="@+id/descripcionPanel"
+        android:layout_below="@+id/nombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_fit">
 
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción del guía"
+            android:layout_margin="10dp"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/idiomaPanel"
+        android:layout_below="@+id/descripcionPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_fit">
+
+        <ImageView
+            android:id="@+id/lenguajeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/comment"
+            android:tint="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Idiomas:"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/lenguajeIcon"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"/>
+
+
+
+
+
+    </RelativeLayout>
 
 
 
