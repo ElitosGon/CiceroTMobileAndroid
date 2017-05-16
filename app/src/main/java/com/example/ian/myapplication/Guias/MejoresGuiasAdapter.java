@@ -1,4 +1,4 @@
-package com.example.ian.myapplication.MainLists;
+package com.example.ian.myapplication.Guias;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -12,11 +12,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.volley.toolbox.ImageLoader;
 import com.example.ian.myapplication.EDA.Guia;
 import com.example.ian.myapplication.R;
-
-import org.w3c.dom.Text;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -24,7 +21,7 @@ import java.util.ArrayList;
 /**
  * Created by Ian on 12-05-2017.
  */
-public class MejoresAdapter extends BaseAdapter{
+public class MejoresGuiasAdapter extends BaseAdapter{
 
     Context context;
     LayoutInflater inflater;
@@ -38,7 +35,7 @@ public class MejoresAdapter extends BaseAdapter{
 
     ArrayList<Guia> guias;
 
-    public MejoresAdapter(Context context, ArrayList<Guia> guias) {
+    public MejoresGuiasAdapter(Context context, ArrayList<Guia> guias) {
         this.context = context;
         this.guias=guias;
     }

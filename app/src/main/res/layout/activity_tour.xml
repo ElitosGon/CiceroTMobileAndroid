@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/topPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            >
+
+            <ImageView
+                android:id="@+id/backIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrow_left"
+                android:tint="@color/white"
+                android:padding="10dp"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/backIcon"
+                android:text="Volver"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_margin="10dp"/>
+        </RelativeLayout>
+
+        <!-- Imagen panel -->
+
+        <RelativeLayout
+            android:id="@+id/imagePanel"
+            android:layout_below="@+id/topPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imagen"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:src="@drawable/log" />
+
+
+    </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_below="@+id/imagePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Títlulo del tour"
+            android:background="@drawable/custom_fit"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="20sp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/descriptionPanel"
+            android:layout_below="@+id/titulo"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_fit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/vineta"
+                android:layout_margin="5dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:tint="@color/colorPrimaryDark"
+                android:src="@drawable/info"/>
+
+            <TextView
+                android:id="@+id/des"
+                android:layout_toRightOf="@+id/vineta"
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Descripción :"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_toRightOf="@+id/vineta"
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/des"
+                android:text="Descripción"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/acercaPanel"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/descriptionPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_fit">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acerca de este tour"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chevron_down"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:tint="@color/grey"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/condicionPanel"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/acercaPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_fit">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Condiciones"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chevron_down"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:tint="@color/grey"/>
+        </RelativeLayout>
+
+        <!-- Panel del guía -->
+
+        <RelativeLayout
+            android:id="@+id/guiaPanel"
+            android:layout_below="@+id/condicionPanel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/custom_fit"
+            >
+
+            <TextView
+                android:id="@+id/guiado"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Guíado por:"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/imagenGuia"
+                android:layout_below="@+id/guiado"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                android:background="@drawable/icon"
+                android:onClick="onClickProfilePicture"
+                app:border_color="@color/white"
+                app:border_width="1dp" />
+
+            <TextView
+                android:id="@+id/nombreguia"
+                android:layout_toRightOf="@+id/imagenGuia"
+                android:layout_alignBottom="@+id/imagenGuia"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre Guía"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/reservar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/highlight_button"
+            android:text="Comprar"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

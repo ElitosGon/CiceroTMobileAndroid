@@ -73,15 +73,15 @@ public class Playadapter extends BaseAdapter{
         ImageView fivestar = (ImageView)itemView.findViewById(R.id.Fivestar);
         ImageView imagen = (ImageView)itemView.findViewById(R.id.img);
 
-        Button boton = (Button)itemView.findViewById(R.id.reservar);
-        boton.setOnClickListener(new View.OnClickListener() {
+        //Button boton = (Button)itemView.findViewById(R.id.reservar);
+        /*boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context,playa.class);
+                Intent intent = new Intent(context,PlantillaTour.class);
                 itemView.getContext().startActivity(intent);
             }
         });
-
+*/
         titulo.setText(tours.get(position).getTitulo());
         ciudad.setText(tours.get(position).getCiudad());
         imagen.setImageResource(fotos[position]);

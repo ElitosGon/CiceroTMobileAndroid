@@ -1,19 +1,20 @@
-package com.example.ian.myapplication;
+package com.example.ian.myapplication.Guias;
 
 import android.app.Activity;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.ian.myapplication.R;
+
 /**
- * Created by Ian on 12-05-2017.
+ * Created by Ian on 16-05-2017.
  */
-public class playa extends Activity {
+public class PlantillaGuia extends Activity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.muestratour);
+        setContentView(R.layout.activity_guia);
 
         ImageView back = (ImageView)findViewById(R.id.backIcon);
 
@@ -24,4 +25,4 @@ public class playa extends Activity {
             }
         });
     }
-    }
+}

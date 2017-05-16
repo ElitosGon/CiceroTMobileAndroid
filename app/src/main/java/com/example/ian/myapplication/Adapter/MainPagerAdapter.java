@@ -5,10 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.ian.myapplication.MainLists.Mejores;
-import com.example.ian.myapplication.MainLists.Ultimos;
-import com.example.ian.myapplication.test;
-import com.example.ian.myapplication.test2;
+import com.example.ian.myapplication.Guias.MejoresGuias;
+import com.example.ian.myapplication.Tours.UltimosTours;
 
 
 public class MainPagerAdapter extends FragmentStatePagerAdapter {
@@ -24,10 +22,10 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
 
         switch (position) {
             case 0:
-                Ultimos tab1 = new Ultimos();
+                UltimosTours tab1 = new UltimosTours();
                 return tab1;
             case 1:
-                Mejores tab2 = new Mejores();
+                MejoresGuias tab2 = new MejoresGuias();
                 return tab2;
             default:
                 return null;

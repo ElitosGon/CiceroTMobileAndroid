@@ -3,16 +3,13 @@ package com.example.ian.myapplication;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.accessibility.AccessibilityRecord;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.ian.myapplication.EDA.Tour;
-import com.example.ian.myapplication.MainLists.UltimosAdapter;
+import com.example.ian.myapplication.Tours.PlantillaTour;
 
 import java.util.ArrayList;
 
@@ -47,7 +44,7 @@ public class LugarActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
 
-                Intent intent = new Intent(LugarActivity.this,playa.class);
+                Intent intent = new Intent(LugarActivity.this,PlantillaTour.class);
                 startActivity(intent);
                 finish();
             }
@@ -60,9 +57,9 @@ public class LugarActivity extends Activity {
     public ArrayList<Tour> setTours(){
         ArrayList<Tour> tours = new ArrayList<>();
 
-        Tour tour1 = new Tour("La mejor playa!",75000,"Un buen tour", "Valparaíso",2,3);
-        Tour tour2 = new Tour("Paseo en la playa",20000,"Un buen tour", "Viña del mar",3,5);
-        Tour tour3 = new Tour("Tour guíado en la playa",30000,"Un buen tour", "Costa Azul",1,4);
+        Tour tour1 = new Tour("La mejor PlantillaTour!",75000,"Un buen tour", "Valparaíso",2,3);
+        Tour tour2 = new Tour("Paseo en la PlantillaTour",20000,"Un buen tour", "Viña del mar",3,5);
+        Tour tour3 = new Tour("Tour guíado en la PlantillaTour",30000,"Un buen tour", "Costa Azul",1,4);
 
         tours.add(tour1);
         tours.add(tour2);

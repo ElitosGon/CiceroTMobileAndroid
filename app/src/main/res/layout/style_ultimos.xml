@@ -2,17 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="2dp">
+    android:layout_margin="2dp"
+    android:descendantFocusability="blocksDescendants"
+   >
 
     <ImageView
         android:id="@+id/img"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="4dp"
         android:scaleType="centerCrop"
         android:layout_marginRight="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/icon"/>
 
     <TextView
@@ -23,8 +25,8 @@
         android:textStyle="bold"
         android:layout_toRightOf="@+id/img"
         android:textSize="16sp"
-        android:layout_marginTop="5dp"
-        android:textColor="@color/textTitle"/>
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/ciudad"
@@ -125,12 +127,13 @@
         android:id="@+id/precio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_alignBottom="@+id/titulo"
         android:layout_alignParentRight="true"
         android:text="$50.000"
         android:layout_marginRight="5dp"
-        android:textSize="20sp"
-        android:textStyle="italic"
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:textColor="@color/colorPrimary"/>
 
 </RelativeLayout>

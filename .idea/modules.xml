@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CiceroT.iml" filepath="$PROJECT_DIR$/CiceroT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CiceroTMobileAndroid.iml" filepath="$PROJECT_DIR$/CiceroTMobileAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

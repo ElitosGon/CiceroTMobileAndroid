@@ -1,4 +1,4 @@
-package com.example.ian.myapplication.MainLists;
+package com.example.ian.myapplication.Tours;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -19,22 +19,21 @@ import java.util.ArrayList;
 /**
  * Created by Ian on 12-05-2017.
  */
-public class UltimosAdapter extends BaseAdapter{
+public class UltimosToursAdapter extends BaseAdapter{
 
     Context context;
     LayoutInflater inflater;
 
 
     int[] fotos = {
-            R.drawable.paisaje1,
-            R.drawable.paisaje2,
-            R.drawable.paisaje3
+            R.drawable.persona,
+            R.drawable.persona2
     };
 
 
     ArrayList<Tour> tours;
 
-    public UltimosAdapter(Context context, ArrayList<Tour> tours) {
+    public UltimosToursAdapter(Context context, ArrayList<Tour> tours) {
         this.context = context;
         this.tours=tours;
     }

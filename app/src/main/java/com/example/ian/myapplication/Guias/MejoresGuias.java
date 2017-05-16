@@ -1,7 +1,7 @@
+package com.example.ian.myapplication.Guias;
 
-package com.example.ian.myapplication.MainLists;
 
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
-import com.example.ian.myapplication.EDA.Tour;
+import com.example.ian.myapplication.EDA.Guia;
+import com.example.ian.myapplication.Main.LoginActivity;
 import com.example.ian.myapplication.R;
 
 import java.util.ArrayList;
@@ -18,9 +20,9 @@ import java.util.ArrayList;
 /**
  * Created by Ian on 12-05-2017.
  */
-public class Ultimos extends Fragment {
+public class MejoresGuias extends Fragment {
     ListView list;
-    UltimosAdapter adapter;
+    MejoresGuiasAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -28,13 +30,13 @@ public class Ultimos extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         list =(ListView)view.findViewById(R.id.list);
 
-
-
+        TextView text = (TextView)view.findViewById(R.id.text);
+        text.setText("Los mejores guías del mes");
         // dummy
-        ArrayList<Tour> tours = setTours();
+        ArrayList<Guia> guias = setTours();
 
 
-        adapter = new UltimosAdapter(getContext(), tours);
+        adapter = new MejoresGuiasAdapter(getContext(), guias);
         list.setAdapter(adapter);
 
 
@@ -42,24 +44,22 @@ public class Ultimos extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-
-
+                Intent intent = new Intent(getActivity(), PlantillaGuia.class);
+                startActivity(intent);
             }
         });
 
         return view;
     }
 
-    public ArrayList<Tour> setTours(){
-        ArrayList<Tour> tours = new ArrayList<>();
+    public ArrayList<Guia> setTours(){
+        ArrayList<Guia> tours = new ArrayList<>();
 
-        Tour tour1 = new Tour("El mejor tour",50000,"Un buen tour", "Valparaíso",2,3);
-        Tour tour2 = new Tour("Viaje entretenido",30000,"Un buen tour", "París",3,5);
-        Tour tour3 = new Tour("Visita al molino",75000,"Un buen tour", "Aquí",1,4);
+        Guia tour1 = new Guia("Israel Martínez","",5,"Santiago",20 );
+        Guia tour2 = new Guia("Pablo Zurita","",4,"Santiago",15 );
 
         tours.add(tour1);
         tours.add(tour2);
-        tours.add(tour3);
 
         return tours;
     }
