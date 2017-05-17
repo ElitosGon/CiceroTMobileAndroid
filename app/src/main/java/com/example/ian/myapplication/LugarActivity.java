@@ -56,7 +56,7 @@ public class LugarActivity extends Activity {
 
     public ArrayList<Tour> setTours(){
         ArrayList<Tour> tours = new ArrayList<>();
-
+/*
         Tour tour1 = new Tour("La mejor PlantillaTour!",75000,"Un buen tour", "Valparaíso",2,3);
         Tour tour2 = new Tour("Paseo en la PlantillaTour",20000,"Un buen tour", "Viña del mar",3,5);
         Tour tour3 = new Tour("Tour guíado en la PlantillaTour",30000,"Un buen tour", "Costa Azul",1,4);
@@ -64,7 +64,7 @@ public class LugarActivity extends Activity {
         tours.add(tour1);
         tours.add(tour2);
         tours.add(tour3);
-
+*/
         return tours;
     }
 }

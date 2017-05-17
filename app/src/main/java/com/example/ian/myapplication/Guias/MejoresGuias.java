@@ -33,7 +33,7 @@ public class MejoresGuias extends Fragment {
         TextView text = (TextView)view.findViewById(R.id.text);
         text.setText("Los mejores guías del mes");
         // dummy
-        ArrayList<Guia> guias = setTours();
+        final ArrayList<Guia> guias = setTours();
 
 
         adapter = new MejoresGuiasAdapter(getContext(), guias);
@@ -45,6 +45,7 @@ public class MejoresGuias extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Intent intent = new Intent(getActivity(), PlantillaGuia.class);
+                intent.putExtra("guia",guias.get(position));
                 startActivity(intent);
             }
         });
@@ -55,8 +56,8 @@ public class MejoresGuias extends Fragment {
     public ArrayList<Guia> setTours(){
         ArrayList<Guia> tours = new ArrayList<>();
 
-        Guia tour1 = new Guia("Israel Martínez","",5,"Santiago",20 );
-        Guia tour2 = new Guia("Pablo Zurita","",4,"Santiago",15 );
+        Guia tour1 = new Guia("Israel Martínez","El mejor guía de Chile",5,"Santiago",20 );
+        Guia tour2 = new Guia("Pablo Zurita","Muerte a todos los turistas",4,"Santiago",15 );
 
         tours.add(tour1);
         tours.add(tour2);

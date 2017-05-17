@@ -28,8 +28,8 @@
 
         <ImageView
             android:id="@+id/star3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_centerHorizontal="true"
             android:tint="@color/colorPrimaryDark"
             android:layout_below="@+id/nombreText"
@@ -38,8 +38,8 @@
 
         <ImageView
             android:id="@+id/star2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_toLeftOf="@+id/star3"
             android:tint="@color/colorPrimaryDark"
             android:layout_below="@+id/nombreText"
@@ -47,8 +47,8 @@
 
         <ImageView
             android:id="@+id/star1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_toLeftOf="@+id/star2"
             android:tint="@color/colorPrimaryDark"
             android:layout_below="@+id/nombreText"
@@ -56,8 +56,8 @@
 
         <ImageView
         android:id="@+id/star4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_toRightOf="@+id/star3"
         android:tint="@color/colorPrimaryDark"
         android:layout_below="@+id/nombreText"
@@ -65,8 +65,8 @@
 
         <ImageView
             android:id="@+id/star5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_toRightOf="@+id/star4"
             android:tint="@color/colorPrimaryDark"
             android:layout_below="@+id/nombreText"
@@ -115,6 +115,7 @@
 
 
         <TextView
+            android:id="@+id/descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Descripción del guía"

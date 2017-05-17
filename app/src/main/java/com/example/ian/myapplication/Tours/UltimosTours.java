@@ -29,10 +29,8 @@ public class UltimosTours extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         list =(ListView)view.findViewById(R.id.list);
 
-
-
         // dummy
-        ArrayList<Tour> tours = setTours();
+        final ArrayList<Tour> tours = setTours();
 
 
         adapter = new UltimosToursAdapter(getContext(), tours);
@@ -44,6 +42,7 @@ public class UltimosTours extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Intent intent = new Intent(getActivity(), PlantillaTour.class);
+                intent.putExtra("tour",tours.get(position));
                 startActivity(intent);
             }
         });
@@ -54,8 +53,8 @@ public class UltimosTours extends Fragment {
     public ArrayList<Tour> setTours(){
         ArrayList<Tour> tours = new ArrayList<>();
 
-        Tour tour1 = new Tour("El mejor tour",50000,"Un buen tour", "Valparaíso",2,3);
-        Tour tour2 = new Tour("Viaje entretenido",30000,"Un buen tour", "París",3,5);
+        Tour tour1 = new Tour("El mejor tour",50000,"Un buen tour", "Valparaíso",2,3,"Ian Orellana",0);
+        Tour tour2 = new Tour("Viaje entretenido",30000,"Un buen tour", "París",3,5,"Elías González",0);
 
         tours.add(tour1);
         tours.add(tour2);

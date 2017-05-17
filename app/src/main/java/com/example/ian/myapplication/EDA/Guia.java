@@ -1,9 +1,11 @@
 package com.example.ian.myapplication.EDA;
 
+import java.io.Serializable;
+
 /**
  * Created by Ian on 12-05-2017.
  */
-public class Guia {
+public class Guia implements Serializable{
     private String nombre;
     private String descripcion;
     private int estrellas;
