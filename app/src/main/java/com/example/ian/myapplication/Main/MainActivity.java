@@ -1,20 +1,10 @@
 package com.example.ian.myapplication.Main;
-import android.app.AlertDialog;
-import android.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.widget.SwitchCompat;
-import android.util.Base64;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -24,35 +14,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
-import android.widget.TableLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.ian.myapplication.Adapter.MainPagerAdapter;
 import com.example.ian.myapplication.Busqueda;
+import com.example.ian.myapplication.Guias.EditarConfiguracion;
 import com.example.ian.myapplication.Guias.EditarPerfil;
-import com.example.ian.myapplication.Guias.MejoresGuias;
 import com.example.ian.myapplication.R;
-import com.example.ian.myapplication.Tours.UltimosTours;
 import com.example.ian.myapplication.test;
-
-import junit.framework.Test;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -64,13 +33,15 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fm = getSupportFragmentManager();
         //FragmentManager fm = getFragmentManager();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Solicitudes");
+        toolbar.setTitle("Conozca los últimos tours");
+
+        final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.getMenu().getItem(0).setChecked(true);
 
         ImageView search = (ImageView)findViewById(R.id.searchButton);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         View hView =  navigationView.getHeaderView(0);
         TextView nav_user = (TextView)hView.findViewById(R.id.nombre);
         TextView nav_esp = (TextView)hView.findViewById(R.id.especialidad);
@@ -204,41 +175,13 @@ public class MainActivity extends AppCompatActivity
             fab.setVisibility(View.GONE);
             fm.beginTransaction().replace(R.id.content_main, new EditarPerfil()).commit();
             toolbar.setTitle("Editar perfil");
+        }else if(id == R.id.nav_configuracion){
+            tabLayout.setVisibility(View.GONE);
+            fab.setVisibility(View.GONE);
+            fm.beginTransaction().replace(R.id.content_main, new EditarConfiguracion()).commit();
+            toolbar.setTitle("Editar configuración");
         }
-     /*   if(id == R.id.nav_aceptados){
-            fm.beginTransaction().replace(R.id.content_main, new AceptadosActivity()).commit();
-            toolbar.setTitle("Atenciones aceptadas");
-        }else if (id == R.id.nav_solicitud) {
-            fm.beginTransaction().replace(R.id.content_main, new SolicitudActivity()).commit();
-            toolbar.setTitle("Solicitudes");
-        } else if (id == R.id.nav_realizados) {
-            fm.beginTransaction().replace(R.id.content_main,new RealizadosActivity()).commit();
-            toolbar.setTitle("Atenciones realizadas");
-        } else if (id == R.id.nav_rechazados) {
-            fm.beginTransaction().replace(R.id.content_main, new RechazadosActivity()).commit();
-            toolbar.setTitle("Atenciones rechazadas");
-        } else if (id == R.id.nav_historial) {
-            fm.beginTransaction().replace(R.id.content_main,new HistorialActivity()).commit();
-            toolbar.setTitle("Historial de atenciones");
-        } else if (id == R.id.nav_cancelados) {
-            fm.beginTransaction().replace(R.id.content_main,new CanceladosActivity()).commit();
-            toolbar.setTitle("Atenciones canceladas");
-        } else if (id == R.id.nav_anulados) {
-            fm.beginTransaction().replace(R.id.content_main,new AnuladosActivity()).commit();
-            toolbar.setTitle("Atenciones anuladas");
-        } else if (id == R.id.nav_perfil) {
-            Intent intent = new Intent(MainActivity.this, EditarPerfil.class);
-            intent.putExtra("doctor",doctor);
-            startActivity(intent);
-        } else if (id == R.id.nav_configuracion) {
-            Intent intent = new Intent(MainActivity.this, EditarConfiguracion.class);
-            intent.putExtra("doctor",doctor);
-            startActivity(intent);
-        }else if (id == R.id.nav_proceso){
-            fm.beginTransaction().replace(R.id.content_main,new ActivadosActivity()).commit();
-            toolbar.setTitle("Atención en curso");
-        }
-*/
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

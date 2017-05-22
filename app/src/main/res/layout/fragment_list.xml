@@ -4,19 +4,9 @@
     android:layout_height="match_parent"
     android:descendantFocusability="blocksDescendants">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Últimos tours publicados!"
-        android:gravity="center"
-        android:textSize="20sp"/>
-
-
 
         <ListView
             android:id="@+id/list"
-            android:layout_below="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />

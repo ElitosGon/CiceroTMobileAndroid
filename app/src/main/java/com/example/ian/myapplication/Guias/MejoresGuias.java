@@ -30,8 +30,6 @@ public class MejoresGuias extends Fragment {
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         list =(ListView)view.findViewById(R.id.list);
 
-        TextView text = (TextView)view.findViewById(R.id.text);
-        text.setText("Los mejores guías del mes");
         // dummy
         final ArrayList<Guia> guias = setTours();
 
