@@ -1,6 +1,7 @@
 package com.example.ian.myapplication.Main;
 import android.app.AlertDialog;
-import android.app.FragmentManager;
+import android.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,6 +28,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.android.volley.AuthFailureError;
@@ -38,7 +40,14 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.ian.myapplication.Adapter.MainPagerAdapter;
 import com.example.ian.myapplication.Busqueda;
+import com.example.ian.myapplication.Guias.EditarPerfil;
+import com.example.ian.myapplication.Guias.MejoresGuias;
 import com.example.ian.myapplication.R;
+import com.example.ian.myapplication.Tours.UltimosTours;
+import com.example.ian.myapplication.test;
+
+import junit.framework.Test;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -52,7 +61,8 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FragmentManager fm = getFragmentManager();
+        FragmentManager fm = getSupportFragmentManager();
+        //FragmentManager fm = getFragmentManager();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Solicitudes");
 
@@ -96,12 +106,14 @@ public class MainActivity extends AppCompatActivity
         @Override
         public void onTabSelected(TabLayout.Tab tab) {
 
-
+            Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
             switch (tab.getPosition()){
                 case 0:
+                    toolbar.setTitle("Conozca lo últimos tours");
                     tab.setIcon(R.drawable.updatres);
                     break;
                 case 1:
+                    toolbar.setTitle("Los mejores guías del mes");
                     tab.setIcon(R.drawable.stared);
                     break;
             }
@@ -177,8 +189,22 @@ public class MainActivity extends AppCompatActivity
         // actualizar doctor aqui o en nav_perfil y nav_configuracion
 
 
-        FragmentManager fm = getFragmentManager();
+        FragmentManager fm = getSupportFragmentManager();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        if(id == R.id.nav_home){
+            tabLayout.setVisibility(View.VISIBLE);
+            fab.setVisibility(View.VISIBLE);
+            fm.beginTransaction().replace(R.id.content_main, new test()).commit();
+            toolbar.setTitle("Conozca los últimos tours");
+        }else if(id == R.id.nav_perfil){
+            tabLayout.setVisibility(View.GONE);
+            fab.setVisibility(View.GONE);
+            fm.beginTransaction().replace(R.id.content_main, new EditarPerfil()).commit();
+            toolbar.setTitle("Editar perfil");
+        }
      /*   if(id == R.id.nav_aceptados){
             fm.beginTransaction().replace(R.id.content_main, new AceptadosActivity()).commit();
             toolbar.setTitle("Atenciones aceptadas");

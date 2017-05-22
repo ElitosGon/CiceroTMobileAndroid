@@ -6,7 +6,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_solicitud"
+            android:id="@+id/nav_home"
             android:icon="@drawable/home_variant"
             android:title="Inicio"/>
             <!--app:actionLayout="@layout/nuevos"-->
@@ -31,7 +31,7 @@
         <menu>
             <group android:checkableBehavior="single">
                 <item
-                    android:id="@+id/nav_realizados"
+                    android:id="@+id/nav_perfil"
                     android:icon="@drawable/account"
                     android:title="Perfil" />
                 <item
