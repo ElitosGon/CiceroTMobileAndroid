@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/paisaje1"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/imagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_fit">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Titulo"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/region"
+            android:layout_below="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Región"/>
+
+        <TextView
+            android:id="@+id/duracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 hrs"
+            android:layout_margin="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/titulo"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/timer"
+            android:layout_toStartOf="@+id/duracion"
+            android:layout_alignBottom="@+id/duracion"/>
+
+        <TextView
+            android:id="@+id/comprados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/region"
+            android:layout_margin="5dp"
+            android:text="7198 comprados"/>
+
+        <ImageView
+            android:id="@+id/Onestar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart= "5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/star"
+            android:tint="@color/colorPrimaryDark"
+            android:layout_below="@+id/comprados"/>
+
+        <ImageView
+            android:id="@+id/Twostar"
+            android:layout_toEndOf="@+id/Onestar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/star"
+            android:tint="@color/colorPrimaryDark"
+            android:layout_below="@+id/comprados"/>
+
+        <ImageView
+            android:id="@+id/Threestar"
+            android:layout_toEndOf="@+id/Twostar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/star"
+            android:tint="@color/colorPrimaryDark"
+            android:layout_below="@+id/comprados"/>
+
+        <ImageView
+            android:id="@+id/Forstar"
+            android:layout_toEndOf="@+id/Threestar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/star"
+            android:tint="@color/colorPrimaryDark"
+            android:layout_below="@+id/comprados"/>
+
+        <ImageView
+            android:id="@+id/Fivestar"
+            android:layout_toEndOf="@+id/Forstar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/star"
+            android:tint="@color/colorPrimaryDark"
+            android:layout_below="@+id/comprados"/>
+
+        <TextView
+            android:id="@+id/precio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/Onestar"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:text="$ 59.990"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
