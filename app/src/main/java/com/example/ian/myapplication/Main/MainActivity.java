@@ -40,7 +40,9 @@ public class MainActivity extends AppCompatActivity
 
         ImageView search = (ImageView)findViewById(R.id.searchButton);
         setSupportActionBar(toolbar);
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         View hView =  navigationView.getHeaderView(0);
         TextView nav_user = (TextView)hView.findViewById(R.id.nombre);

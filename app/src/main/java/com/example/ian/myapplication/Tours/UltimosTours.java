@@ -4,10 +4,13 @@ package com.example.ian.myapplication.Tours;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import com.example.ian.myapplication.Main.LoginActivity;
@@ -42,8 +45,33 @@ public class UltimosTours extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Intent intent = new Intent(getActivity(), PlantillaTour.class);
-                intent.putExtra("tour",tours.get(position));
+                intent.putExtra("tour", tours.get(position));
                 startActivity(intent);
+            }
+        });
+
+        list.setOnScrollListener(new AbsListView.OnScrollListener() {
+            private int mLastFirstVisibleItem;
+
+            @Override
+            public void onScrollStateChanged(AbsListView view, int scrollState) {
+
+            }
+
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem,
+                                 int visibleItemCount, int totalItemCount) {
+
+                if(mLastFirstVisibleItem<firstVisibleItem)
+                {
+                    Snackbar.make(view,"abajo",Snackbar.LENGTH_LONG);
+                }
+                if(mLastFirstVisibleItem>firstVisibleItem)
+                {
+                    Snackbar.make(view, "arriba", Snackbar.LENGTH_LONG);
+                }
+                mLastFirstVisibleItem=firstVisibleItem;
+
             }
         });
 

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class SeleccionRegistro extends Activity{
 
     TextView Login;
     ImageView back;
+    Button registroTurista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class SeleccionRegistro extends Activity{
 
         Login = (TextView)findViewById(R.id.Remember);
         back = (ImageView)findViewById(R.id.backIcon);
+        registroTurista = (Button)findViewById(R.id.registroTurista);
 
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,10 +36,18 @@ public class SeleccionRegistro extends Activity{
                 finish();
             }
         });
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SeleccionRegistro.this, Welcome.class);
+                finish();
+            }
+        });
+
+        registroTurista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SeleccionRegistro.this,RegistroTurista.class);
                 startActivity(intent);
                 finish();
             }

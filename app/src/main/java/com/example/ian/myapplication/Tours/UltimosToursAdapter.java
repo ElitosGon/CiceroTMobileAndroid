@@ -26,8 +26,8 @@ public class UltimosToursAdapter extends BaseAdapter{
 
 
     int[] fotos = {
-            R.drawable.persona,
-            R.drawable.persona2
+            R.drawable.paisaje1,
+            R.drawable.paisaje2
     };
 
 
@@ -57,10 +57,10 @@ public class UltimosToursAdapter extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View itemView = inflater.inflate(R.layout.style_ultimos, parent, false);
+        View itemView = inflater.inflate(R.layout.style_groupon, parent, false);
 
         TextView titulo = (TextView)itemView.findViewById(R.id.titulo);
-        TextView ciudad = (TextView)itemView.findViewById(R.id.ciudad);
+        TextView region = (TextView)itemView.findViewById(R.id.region);
         TextView duracion = (TextView)itemView.findViewById(R.id.duracion);
         TextView precio = (TextView)itemView.findViewById(R.id.precio);
         ImageView onestar = (ImageView)itemView.findViewById(R.id.Onestar);
@@ -68,10 +68,10 @@ public class UltimosToursAdapter extends BaseAdapter{
         ImageView threestar = (ImageView)itemView.findViewById(R.id.Threestar);
         ImageView forstar = (ImageView)itemView.findViewById(R.id.Forstar);
         ImageView fivestar = (ImageView)itemView.findViewById(R.id.Fivestar);
-        ImageView imagen = (ImageView)itemView.findViewById(R.id.img);
+        ImageView imagen = (ImageView)itemView.findViewById(R.id.imagen);
 
         titulo.setText(tours.get(position).getTitulo());
-        ciudad.setText(tours.get(position).getCiudad());
+        region.setText(tours.get(position).getCiudad());
         imagen.setImageResource(fotos[position]);
         duracion.setText("2 hrs.");
         precio.setText(formatoPrecio(String.valueOf(tours.get(position).getPrecio())));

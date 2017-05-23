@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_left"
+            android:tint="@color/colorPrimaryDark"
+            android:padding="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Registro turista"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:layout_margin="10dp"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:src="@drawable/log"
+        android:layout_below="@+id/topPanel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textCorreo"
+        android:layout_width="match_parent"
+        android:background="@color/softGrey"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/logo"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/correo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="top"
+            android:background="@android:color/transparent"
+            android:inputType="textEmailAddress"
+            android:hint="Ingrese correo"
+            android:textSize="20sp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textContrasena"
+        android:layout_width="match_parent"
+        android:background="@color/softGrey"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/textCorreo"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/contrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="top"
+            android:background="@android:color/transparent"
+            android:inputType="textPassword"
+            android:hint="Ingrese contraseña"
+            android:textSize="20sp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textConfirma"
+        android:layout_width="match_parent"
+        android:background="@color/softGrey"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/textContrasena"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/confirma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_gravity="top"
+            android:background="@android:color/transparent"
+            android:inputType="textPassword"
+            android:hint="Confirmar contraseña"
+            android:textSize="20sp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:layout_below="@+id/textConfirma"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"
+        android:background="@drawable/highlight_button"/>
+
+</RelativeLayout>
