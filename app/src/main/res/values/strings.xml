@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">CiceroT</string>
-
+    <string name="titulo">Disfrute de un día en el las mejores playas de Chile!</string>
+    <string name="total">Precio Total : </string>
+    <string name="precioDefecto">$50.000</string>
+    <string name="comprar">Agendar</string>
 
 </resources>

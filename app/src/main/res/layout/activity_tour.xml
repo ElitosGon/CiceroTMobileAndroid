@@ -6,11 +6,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonPanel">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
         <RelativeLayout
@@ -32,7 +33,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/backIcon"
+                android:layout_toEndOf="@+id/backIcon"
                 android:text="Volver"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -52,7 +53,7 @@
                 android:layout_width="match_parent"
                 android:scaleType="centerCrop"
                 android:layout_height="180dp"
-                android:src="@drawable/log" />
+                android:src="@drawable/paisaje1" />
 
 
     </RelativeLayout>
@@ -62,10 +63,11 @@
             android:layout_below="@+id/imagePanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Títlulo del tour"
+            android:padding="10dp"
+            android:text="@string/titulo"
             android:background="@drawable/custom_fit"
             android:gravity="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="20sp"/>
 
@@ -126,9 +128,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/chevron_down"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:tint="@color/grey"/>
         </RelativeLayout>
 
@@ -152,9 +154,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/chevron_down"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
                 android:tint="@color/grey"/>
         </RelativeLayout>
 
@@ -191,7 +193,7 @@
 
             <TextView
                 android:id="@+id/nombreguia"
-                android:layout_toRightOf="@+id/imagenGuia"
+                android:layout_toEndOf="@+id/imagenGuia"
                 android:layout_alignBottom="@+id/imagenGuia"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/colorPrimaryDark"
@@ -208,20 +210,60 @@
 
     <RelativeLayout
         android:id="@+id/buttonPanel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_fit">
 
-        <Button
-            android:id="@+id/reservar"
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="@color/softGrey"
+            android:layout_centerInParent="true"/>
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/highlight_button"
-            android:text="Comprar"
-            android:layout_margin="10dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            android:layout_alignParentBottom="true"/>
+            android:layout_toStartOf="@+id/separator">
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/precio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/total"
+                android:text="@string/precioDefecto"
+                android:textSize="25sp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_toEndOf="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/highlight_button"
+                android:text="@string/comprar"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_margin="5dp"/>
+
+        </RelativeLayout>
+
+
     </RelativeLayout>
 
 
