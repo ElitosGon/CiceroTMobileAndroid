@@ -39,8 +39,6 @@ public class Busqueda extends Activity {
                             (keyCode == KeyEvent.KEYCODE_ENTER)) {
 
                         ///Simula una busqueda
-                            Intent intent = new Intent(Busqueda.this, LugarActivity.class);
-                            startActivity(intent);
 
 
                         return true;

@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.ian.myapplication.DetailActivity;
 import com.example.ian.myapplication.R;
 
 /**

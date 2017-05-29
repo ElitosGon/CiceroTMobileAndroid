@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@string/titulo"
-            android:background="@drawable/custom_fit"
+            android:background="@color/white"
             android:gravity="center"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -73,38 +73,140 @@
 
 
         <RelativeLayout
-            android:id="@+id/descriptionPanel"
+            android:id="@+id/iconBar"
             android:layout_below="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <ImageView
+                    android:id="@+id/leftIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_menu_camera"
+                    android:tint="@color/softGrey"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/leftIcon"
+                    android:text="Dato central"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/centralIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_menu_camera"
+                    android:tint="@color/softGrey"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/centralIcon"
+                    android:text="Dato central"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:id="@+id/rightIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_menu_camera"
+                    android:tint="@color/softGrey"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rightIcon"
+                    android:text="Dato central"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/compras"
+            android:layout_below="@id/iconBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_fit">
+
+            <TextView
+                android:id="@+id/ofertas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:text="Contenido de oferta"
+                />
+
+            <TextView
+                android:id="@+id/precios"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$50.000"
+                android:layout_below="@+id/ofertas"
+                android:layout_alignParentEnd="true"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/descriptionPanel"
+            android:layout_below="@+id/compras"
             android:layout_marginTop="5dp"
             android:background="@drawable/custom_fit"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/vineta"
-                android:layout_margin="5dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:tint="@color/colorPrimaryDark"
-                android:src="@drawable/info"/>
-
             <TextView
                 android:id="@+id/des"
-                android:layout_toRightOf="@+id/vineta"
-                android:layout_marginTop="6dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Descripción :"
-                android:textColor="@color/black"/>
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:text="Destacados"
+                />
 
             <TextView
-                android:id="@+id/descripcion"
-                android:layout_toRightOf="@+id/vineta"
-                android:layout_margin="2dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:id="@+id/destacados"
                 android:layout_below="@+id/des"
-                android:text="Descripción"/>
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contenido destacado"/>
 
         </RelativeLayout>
 
@@ -187,6 +289,7 @@
                 android:scaleType="centerCrop"
                 android:layout_margin="10dp"
                 android:background="@drawable/icon"
+                android:src="@drawable/persona"
                 android:onClick="onClickProfilePicture"
                 app:border_color="@color/white"
                 app:border_width="1dp" />
