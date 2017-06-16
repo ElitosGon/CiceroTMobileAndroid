@@ -13,9 +13,6 @@ import com.example.ian.myapplication.R;
  */
 public class PlantillaTour extends Activity {
 
-
-    ImageView back;
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tour_display);

@@ -23,6 +23,7 @@ public class TourFragment extends Fragment {
     RelativeLayout titlePanel;
     TextView titulo;
     TextView tituloCollapse;
+    ImageView back;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,6 +33,14 @@ public class TourFragment extends Fragment {
         titlePanel = (RelativeLayout)view.findViewById(R.id.titlePanel);
         titulo = (TextView)view.findViewById(R.id.titulo);
         tituloCollapse = (TextView)view.findViewById(R.id.tituloCollapse);
+        back = (ImageView)view.findViewById(R.id.backArrow);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().finish();
+            }
+        });
 
         AppBarLayout appBarLayout = (AppBarLayout) view.findViewById(R.id.MyAppbar);
         appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {

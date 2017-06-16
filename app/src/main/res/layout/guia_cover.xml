@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragmentPerfil"
+        android:name="com.example.ian.myapplication.Guias.GuiaFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttonPanel"/>
+
+    <RelativeLayout
+        android:id="@+id/buttonPanel"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_fit">
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="@color/softGrey"
+            android:layout_centerInParent="true"/>
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/highlight_button"
+                android:text="Ver Tours"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_margin="5dp"/>
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
