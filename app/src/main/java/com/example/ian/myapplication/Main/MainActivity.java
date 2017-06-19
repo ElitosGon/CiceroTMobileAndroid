@@ -15,16 +15,22 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import com.example.ian.myapplication.Adapter.MainPagerAdapter;
 import com.example.ian.myapplication.Busqueda;
 import com.example.ian.myapplication.Guias.EditarConfiguracion;
 import com.example.ian.myapplication.Guias.EditarPerfil;
+import com.example.ian.myapplication.MapView;
 import com.example.ian.myapplication.R;
+import com.example.ian.myapplication.Tours.UltimosTours;
+import com.example.ian.myapplication.Turistas.HistorialList;
 import com.example.ian.myapplication.test;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -172,6 +178,21 @@ public class MainActivity extends AppCompatActivity
             fab.setVisibility(View.VISIBLE);
             fm.beginTransaction().replace(R.id.content_main, new test()).commit();
             toolbar.setTitle("Conozca los últimos tours");
+        }else if(id == R.id.nav_mapa){
+            tabLayout.setVisibility(View.GONE);
+            fab.setVisibility(View.GONE);
+            fm.beginTransaction().replace(R.id.content_main, new MapView()).commit();
+            toolbar.setTitle("Buscar en el mapa");
+        }else if(id == R.id.nav_sugeridos){
+            tabLayout.setVisibility(View.GONE);
+            fab.setVisibility(View.GONE);
+            fm.beginTransaction().replace(R.id.content_main, new UltimosTours()).commit();
+            toolbar.setTitle("Tours sugeridos");
+        }else if(id == R.id.nav_history){
+            tabLayout.setVisibility(View.GONE);
+            fab.setVisibility(View.GONE);
+            fm.beginTransaction().replace(R.id.content_main,new HistorialList()).commit();
+            toolbar.setTitle("Historial");
         }else if(id == R.id.nav_perfil){
             tabLayout.setVisibility(View.GONE);
             fab.setVisibility(View.GONE);

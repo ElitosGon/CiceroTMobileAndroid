@@ -90,14 +90,14 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/ic_menu_camera"
+                    android:src="@drawable/star"
                     android:tint="@color/softGrey"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/leftIcon"
-                    android:text="Dato central"/>
+                    android:text="5 estrellas"/>
             </RelativeLayout>
 
 
@@ -113,14 +113,14 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/ic_menu_camera"
+                    android:src="@drawable/shopping"
                     android:tint="@color/softGrey"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/centralIcon"
-                    android:text="Dato central"/>
+                    android:text="50 compras"/>
             </RelativeLayout>
 
 
@@ -136,14 +136,14 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/ic_menu_camera"
+                    android:src="@drawable/certificate"
                     android:tint="@color/softGrey"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/rightIcon"
-                    android:text="Dato central"/>
+                    android:text="Guía certificado"/>
             </RelativeLayout>
 
         </RelativeLayout>

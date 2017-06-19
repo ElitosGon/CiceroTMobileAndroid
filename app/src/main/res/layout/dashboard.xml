@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddd">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/satisfaccion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:text="Evaluación de turistas"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_below="@+id/satisfaccion"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/circle_shape"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="85"
+                        android:progressDrawable="@drawable/circular_progress_bar" />
+
+                    <TextView
+                        android:id="@+id/progress_circle_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/satisfaccion"
+                        android:layout_marginTop="80dp"
+                        android:background="@android:color/transparent"
+                        android:layout_centerHorizontal="true"
+                        android:text="85%"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dinero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:text="Dinero recaudado anual"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+                    <TextView
+                        android:id="@+id/progress_circle_text1"
+                        android:layout_below="@+id/dinero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:paddingBottom="90dp"
+                        android:paddingTop="70dp"
+                        android:text="$1.000.000"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/ocupacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:text="           Ocupación                   "
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="26dp"
+                        android:background="@drawable/circle_shape"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="60"
+                        android:progressDrawable="@drawable/circular_progress_bar" />
+
+                    <TextView
+                        android:id="@+id/progress_circle_text3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ocupacion"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="70dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="60%"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/mensual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="16dp"
+                        android:text="Dinero recaudado mensual"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+
+                    <TextView
+                        android:id="@+id/progress_circle_text4"
+                        android:layout_below="@+id/mensual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:paddingTop="50dp"
+                        android:paddingBottom="80dp"
+                        android:text="$500.000"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/highlight_white">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_fit"
+        android:padding="12dp"
+        >
+
+        
+
+        <TextView
+            android:id="@+id/textNombre"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Título del tour"/>
+
+
+        <TextView
+            android:id="@+id/textComuna"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNombre"
+            android:text="Ciudad, Región"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:id="@+id/textCalificada"
+            android:layout_below="@+id/textComuna"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No calificada"
+            android:textSize="12sp"
+            android:textColor="@color/grey"/>
+
+
+        <TextView
+            android:id="@+id/fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textNombre"
+            android:text="08/02/2017"
+            android:textSize="10dp"
+            android:layout_alignParentRight="true"/>
+
+        <TextView
+            android:id="@+id/hora"
+            android:layout_below="@+id/fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16:17"
+            android:textSize="10dp"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textComuna"
+            android:layout_alignParentEnd="true"
+            android:tint="@color/grey"
+            android:src="@drawable/staroutline"/>
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toStartOf="@+id/star5"
+            android:tint="@color/grey"
+            android:layout_below="@+id/textComuna"
+            android:src="@drawable/staroutline"/>
+
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textComuna"
+            android:layout_toStartOf="@+id/star4"
+            android:tint="@color/grey"
+            android:src="@drawable/staroutline"/>
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textComuna"
+            android:layout_toStartOf="@+id/star3"
+            android:tint="@color/grey"
+            android:src="@drawable/staroutline"/>
+
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textComuna"
+            android:layout_toStartOf="@+id/star2"
+            android:tint="@color/grey"
+            android:src="@drawable/staroutline"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

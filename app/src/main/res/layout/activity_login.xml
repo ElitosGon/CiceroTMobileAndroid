@@ -45,7 +45,7 @@
         android:layout_below="@+id/LoginImage"
         android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/EmailText"
+            android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
@@ -62,7 +62,7 @@
         android:layout_below="@+id/textLogin"
         android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/PassText"
+            android:id="@+id/pass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"

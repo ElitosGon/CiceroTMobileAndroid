@@ -1,31 +1,30 @@
-
-package com.example.ian.myapplication.Tours;
-
+package com.example.ian.myapplication.CuentaGuia.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import com.example.ian.myapplication.Main.LoginActivity;
+
 import com.example.ian.myapplication.EDA.Tour;
 import com.example.ian.myapplication.R;
+import com.example.ian.myapplication.Tours.PlantillaTour;
+import com.example.ian.myapplication.Turistas.HistorialAdapter;
 
 import java.util.ArrayList;
 
 /**
- * Created by Ian on 12-05-2017.
+ * Created by Ian on 18-06-2017.
  */
-public class UltimosTours extends Fragment {
-    ListView list;
-    UltimosToursAdapter adapter;
+public class ActividadGuia extends Fragment {
 
+    ListView list;
+    ActividadAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,10 +33,10 @@ public class UltimosTours extends Fragment {
         list =(ListView)view.findViewById(R.id.list);
 
         // dummy
-        final ArrayList<Tour> tours = setTours();
+        final ArrayList<Tour> tours = setHistorial();
 
 
-        adapter = new UltimosToursAdapter(getContext(), tours);
+        adapter = new ActividadAdapter(getContext(), tours);
         list.setAdapter(adapter);
 
 
@@ -65,7 +64,7 @@ public class UltimosTours extends Fragment {
 
                 if(mLastFirstVisibleItem<firstVisibleItem)
                 {
-                    Snackbar.make(view,"abajo",Snackbar.LENGTH_LONG);
+                    Snackbar.make(view, "abajo", Snackbar.LENGTH_LONG);
                 }
                 if(mLastFirstVisibleItem>firstVisibleItem)
                 {
@@ -79,11 +78,11 @@ public class UltimosTours extends Fragment {
         return view;
     }
 
-    public ArrayList<Tour> setTours(){
+    public ArrayList<Tour> setHistorial(){
         ArrayList<Tour> tours = new ArrayList<>();
 
-        Tour tour1 = new Tour("El mejor tour",50000,"Un buen tour", "Valparaíso",2,3,"Ian Orellana",0);
-        Tour tour2 = new Tour("Viaje entretenido",30000,"Un buen tour", "París",3,5,"Elías González",0);
+        Tour tour1 = new Tour("El mejor tour",50000,"Un buen tour", "Valparaíso",2,3,"Ian Orellana",0,0,false);
+        Tour tour2 = new Tour("Viaje entretenido",30000,"Un buen tour", "París",3,5,"Elías González",0,3,true);
 
         tours.add(tour1);
         tours.add(tour2);

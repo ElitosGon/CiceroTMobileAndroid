@@ -6,25 +6,21 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/home_variant"
-            android:title="Inicio"/>
-            <!--app:actionLayout="@layout/nuevos"-->
+            android:id="@+id/nav_nuevos"
+            android:icon="@drawable/bell"
+            android:title="Actividad"/>
+        <!--app:actionLayout="@layout/nuevos"-->
 
         <item
-            android:id="@+id/nav_mapa"
-            android:icon="@drawable/map_marker"
-            android:title="Ver mapa" />
+            android:id="@+id/nav_tours"
+            android:icon="@drawable/list"
+            android:title="Mis tours" />
 
         <item
-            android:id="@+id/nav_sugeridos"
-            android:icon="@drawable/tag"
-            android:title="Tours sugeridos" />
+            android:id="@+id/nav_stats"
+            android:icon="@drawable/chartline"
+            android:title="Estadísticas" />
 
-        <item
-            android:id="@+id/nav_history"
-            android:icon="@drawable/history"
-            android:title="Historial" />
     </group>
 
     <item android:title="Personal">
